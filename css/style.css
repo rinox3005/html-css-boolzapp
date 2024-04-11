@@ -29,7 +29,6 @@ body {
 
 .flex-user {
     display: flex;
-    width: 100%;
 }
 
 .container {
@@ -151,8 +150,11 @@ body {
 }
 
 .user-data {
+    display: flex;
     padding-top: 5px;
     padding-left: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .user-name {
@@ -162,6 +164,24 @@ body {
 
 .user-name .name {
     margin-bottom: 4px;
+}
+
+.functions {
+    padding-right: 30px;
+    font-size: 25px;
+}
+
+.functions i {
+    padding: 0 8px;
+}
+
+.flex-functions {
+    display: none;
+}
+
+.last-access,
+.functions i {
+    color: rgb(168, 168, 168);
 }
 
 /* RESPONSIVE */
@@ -183,15 +203,10 @@ body {
         height: calc(100% - 70px);
     }
 
-    .flex-user {
-        display: flex;
-        width: 70%;
+    .flex-functions {
+        display: block;
     }
 
-    .flex-functions {
-        display: flex;
-        width: 30%;
-    }
 }
 
 @media screen and (min-width:991px) {
