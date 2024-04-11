@@ -1,8 +1,90 @@
-:root {}
+/* MOBILE FIRST */
+
+:root {
+    --body-color: grey;
+    --webapp-bg: lightgray;
+    --chat-color: yellow;
+    --user-color: blue;
+}
 
 /* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* COMMON */
+body {
+    background-color: var(--body-color);
+    height: 100vh;
+    display: flex;
+}
+
+.container {
+    background-color: var(--webapp-bg);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.window {
+    display: flex;
+    height: 100%;
+}
+
+.user {
+    background-color: var(--user-color);
+    width: 100%;
+    display: none;
+}
+
+.chat {
+    background-color: var(--chat-color);
+    width: 100%;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width:576px) {
+
+    .user {
+        background-color: var(--user-color);
+        width: 100px;
+        display: block;
+    }
+
+    .chat {
+        background-color: var(--chat-color);
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .container {
+        background-color: var(--webapp-bg);
+        width: 80%;
+        height: 90%;
+        margin: auto;
+    }
+
+    .user {
+        background-color: var(--user-color);
+        width: 500px;
+    }
+
+    .chat {
+        background-color: var(--chat-color);
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+
+    .container {
+        max-width: 1320px;
+    }
+
 }
