@@ -56,15 +56,13 @@ body {
 }
 
 .preview,
-.search,
-.notfications,
-.options {
+.notifications {
     display: none;
 }
 
 .options {
     border: var(--section-view);
-    height: 80px;
+    height: 70px;
 }
 
 .notifications {
@@ -72,17 +70,49 @@ body {
     height: 80px;
 }
 
-.search {
+.input-search-group {
     border: var(--section-view);
     height: 45px;
     padding: 5px;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    display: none;
+}
+
+.input-search-icon {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 13px;
+    background-color: #fff;
+    border-radius: 5px 0 0 5px;
+    color: rgb(168, 168, 168);
+}
+
+.input-search {
+    display: flex;
 }
 
 .search-bar {
+    display: block;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-size: 14px;
+    color: #757575;
+}
+
+.message-bar {
     width: 100%;
     height: 100%;
     border: none;
     border-radius: 5px;
+    font-size: 14px;
+    padding-left: 20px;
 }
 
 .chat {
@@ -92,12 +122,12 @@ body {
 
 .user-data,
 .insert {
-    height: 80px;
+    height: 70px;
     width: 100%;
 }
 
 .messages {
-    height: calc(100% - 160px);
+    height: calc(100% - 140px);
     width: 100%;
     overflow-y: scroll;
     background-image: url(../img/mine.jpg);
@@ -106,6 +136,8 @@ body {
 
 .user-window {
     height: 100%;
+    border-right: 1px solid lightgray;
+    overflow: hidden;
 }
 
 .user-chat {
@@ -122,7 +154,7 @@ body {
 .sent {
     width: 70%;
     border-radius: 10px;
-    background-color: lightgreen;
+    background-color: #D4F9BB;
     padding: 15px 10px;
     font-size: 16px;
     margin-bottom: 10px;
@@ -133,18 +165,39 @@ body {
 .received {
     width: 70%;
     border-radius: 10px;
-    background-color: rgb(245, 236, 236);
+    background-color: #fff;
     padding: 15px 10px;
     font-size: 16px;
     margin-left: 25px;
+    margin-bottom: 10px;
 }
 
 .insert {
     padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.fa-face-smile {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    color: #6B7376;
+}
+
+.fa-microphone {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    color: #6B7376;
+}
+
+.insert i {
+    display: none;
 }
 
 .user-icon img {
-    height: 65px;
+    height: 55px;
     border-radius: 100%;
     object-fit: cover;
 }
@@ -158,17 +211,24 @@ body {
 }
 
 .user-name {
-    padding-top: 12px;
+    padding-top: 9px;
     padding-left: 10px;
 }
 
 .user-name .name {
-    margin-bottom: 4px;
+    margin-bottom: 2px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.user-name .last-access {
+
+    font-size: 14px;
 }
 
 .functions {
-    padding-right: 30px;
-    font-size: 25px;
+    padding-right: 20px;
+    font-size: 20px;
 }
 
 .functions i {
@@ -201,11 +261,19 @@ body {
 
     .chat-list {
         height: calc(100% - 70px);
+        overflow-y: scroll;
     }
 
     .flex-functions {
         display: block;
     }
+
+
+    .insert i {
+        display: block;
+    }
+
+
 
 }
 
@@ -213,31 +281,36 @@ body {
 
     .container {
         width: 80%;
-        height: 90%;
+        height: 95%;
         margin: auto;
     }
 
     .user {
         background-color: var(--user-color);
-        width: 500px;
+        width: 350px;
+        flex-shrink: 0;
     }
 
     .chat {
         background-color: var(--chat-color);
-        width: 100%;
+        flex-grow: 1;
     }
 
     .preview,
     .search,
-    .notfications,
+    .notifications,
     .options {
         display: block;
     }
 
     .chat-list {
         width: 100%;
-        height: calc(100% - 195px);
+        height: calc(100% - 205px);
         overflow-y: scroll;
+    }
+
+    .input-search-group {
+        display: flex;
     }
 
 }
