@@ -330,6 +330,21 @@ body {
     padding: 15px 0 15px 15px;
 }
 
+.time i {
+    display: inline;
+    font-size: 14px;
+    padding-left: 6px;
+    padding-right: 3px;
+    color: rgb(81, 181, 243);
+}
+
+.preview i {
+    font-size: 14px;
+    padding-left: 6px;
+    padding-right: 5px;
+    color: rgb(81, 181, 243);
+}
+
 .user-icon:hover {
     cursor: pointer;
 }
@@ -339,8 +354,8 @@ body {
     background-color: #e9e8e8d0;
 }
 
-.functions i:hover,
-.right-functions i:hover {
+.right-functions .fa-angle-down:hover,
+.functions i:hover {
     cursor: pointer;
     color: #6B7376;
 }
